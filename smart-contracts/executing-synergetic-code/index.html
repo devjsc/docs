@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Everything you need to know about Fetch.ai.">
   <meta name="generator" content="mkdocs-1.0.4, mkdocs-">
-  <meta name="author" content="katharine.murphy@fetch.ai">
+  <meta name="author" content="developer@fetch.ai">
   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -235,8 +235,20 @@
 </li>
  
 <li>
+    <a href="../../aea/tac-skills/" id="aea-tac-skills-"
+        >TAC skills</a
+    >
+</li>
+ 
+<li>
     <a href="../../aea/tac/" id="aea-tac-"
         >TAC external app</a
+    >
+</li>
+ 
+<li>
+    <a href="../../aea/car-park/" id="aea-car-park-"
+        >Car park agent</a
     >
 </li>
 
@@ -799,14 +811,14 @@
     <span class="n">api</span> <span class="o">=</span> <span class="n">LedgerApi</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="mi">8100</span><span class="p">)</span>
 
     <span class="c1"># create an entity and provide it some wealth</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Setup...&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Setup...&#39;</span><span class="p">)</span>
     <span class="n">entity</span> <span class="o">=</span> <span class="n">Entity</span><span class="p">()</span>
     <span class="n">api</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">tokens</span><span class="o">.</span><span class="n">wealth</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="mi">100000000</span><span class="p">))</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Setup...complete&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Setup...complete&#39;</span><span class="p">)</span>
 
     <span class="c1"># create the contract on the ledger</span>
     <span class="n">synergy_contract</span> <span class="o">=</span> <span class="n">SynergeticContract</span><span class="p">(</span><span class="n">CONTRACT_TEXT</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">synergy_contract</span><span class="o">.</span><span class="n">digest</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">synergy_contract</span><span class="o">.</span><span class="n">digest</span><span class="p">)</span>
 
     <span class="n">api</span><span class="o">.</span><span class="n">sync</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">contracts</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">synergy_contract</span><span class="p">,</span> <span class="mi">4096</span><span class="p">))</span>
 
@@ -865,6 +877,7 @@
   <link rel="stylesheet" id="font-awesome-css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" type="text/css" media="all">
   <script src="../../js/main.js"></script>
       <script src="../../js/menu.js"></script>
+      <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
       <script src="../../search/main.js"></script>
 </body>
 

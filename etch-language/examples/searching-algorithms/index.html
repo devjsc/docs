@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Everything you need to know about Fetch.ai.">
   <meta name="generator" content="mkdocs-1.0.4, mkdocs-">
-  <meta name="author" content="katharine.murphy@fetch.ai">
+  <meta name="author" content="developer@fetch.ai">
   <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -235,8 +235,20 @@
 </li>
  
 <li>
+    <a href="../../../aea/tac-skills/" id="aea-tac-skills-"
+        >TAC skills</a
+    >
+</li>
+ 
+<li>
     <a href="../../../aea/tac/" id="aea-tac-"
         >TAC external app</a
+    >
+</li>
+ 
+<li>
+    <a href="../../../aea/car-park/" id="aea-car-park-"
+        >Car park agent</a
     >
 </li>
 
@@ -749,81 +761,81 @@
 <h1>Creating a search algorithm</h1>
 
 <h2 id="linear-search">Linear search</h2>
-<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="o">()</span>
+<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">()</span>
 
-  <span class="n">var</span> <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;(</span><span class="mi">5</span><span class="o">);</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">40</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">41</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">43</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">44</span><span class="o">;</span>
+  <span class="kd">var</span> <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">41</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">44</span><span class="p">;</span>
 
-  <span class="n">var</span> <span class="n">search_for</span> <span class="o">=</span> <span class="mi">48</span><span class="o">;</span>
+  <span class="kd">var</span> <span class="n">search_for</span> <span class="o">=</span> <span class="mi">48</span><span class="p">;</span>
 
-  <span class="n">var</span> <span class="n">found</span> <span class="o">:</span> <span class="n">Bool</span><span class="o">;</span>
-  <span class="n">found</span> <span class="o">=</span> <span class="n">linear_search</span><span class="o">(</span><span class="n">myArray</span><span class="o">,</span> <span class="n">search_for</span><span class="o">);</span>
-  <span class="n">printLn</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">search_for</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; is in the list? : &quot;</span> <span class="o">+</span> <span class="n">toString</span><span class="o">(</span><span class="n">found</span><span class="o">));</span>
+  <span class="kd">var</span> <span class="n">found</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+  <span class="n">found</span> <span class="o">=</span> <span class="n">linear_search</span><span class="p">(</span><span class="n">myArray</span><span class="p">,</span> <span class="n">search_for</span><span class="p">);</span>
+  <span class="n">printLn</span><span class="p">(</span><span class="n">toString</span><span class="p">(</span><span class="n">search_for</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; is in the list? : &quot;</span> <span class="o">+</span> <span class="n">toString</span><span class="p">(</span><span class="n">found</span><span class="p">));</span>
 
 <span class="n">endfunction</span>
 
 
-<span class="n">function</span> <span class="nf">linear_search</span><span class="o">(</span><span class="n">an_array</span> <span class="o">:</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;,</span> <span class="n">search_for</span> <span class="o">:</span><span class="n">Int32</span><span class="o">)</span> <span class="o">:</span> <span class="n">Bool</span>
+<span class="n">function</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">an_array</span> <span class="p">:</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">search_for</span> <span class="p">:</span><span class="n">Int32</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span>
 
-    <span class="n">var</span> <span class="n">found</span> <span class="o">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="kd">var</span> <span class="n">found</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
-    <span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="n">in</span> <span class="mi">0</span><span class="o">:</span><span class="n">an_array</span><span class="o">.</span><span class="na">count</span><span class="o">())</span> 
-      <span class="k">if</span> <span class="o">(</span><span class="n">an_array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">search_for</span><span class="o">)</span>
-        <span class="n">found</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="mi">0</span><span class="p">:</span><span class="n">an_array</span><span class="p">.</span><span class="na">count</span><span class="p">())</span> 
+      <span class="k">if</span> <span class="p">(</span><span class="n">an_array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">search_for</span><span class="p">)</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
       <span class="n">endif</span>
     <span class="n">endfor</span>
 
-    <span class="k">return</span> <span class="n">found</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">found</span><span class="p">;</span>
 
 <span class="n">endfunction</span>
 </pre></div>
 
 <h2 id="binary-search">Binary search</h2>
-<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="o">()</span>
+<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">()</span>
 
-  <span class="n">var</span> <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;(</span><span class="mi">5</span><span class="o">);</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">40</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">41</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">43</span><span class="o">;</span>
-  <span class="n">myArray</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">44</span><span class="o">;</span>
+  <span class="kd">var</span> <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">41</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span>
+  <span class="n">myArray</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">44</span><span class="p">;</span>
 
-  <span class="n">var</span> <span class="n">search_for</span> <span class="o">=</span> <span class="mi">40</span><span class="o">;</span>
+  <span class="kd">var</span> <span class="n">search_for</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
 
-  <span class="n">var</span> <span class="n">found</span> <span class="o">:</span> <span class="n">Bool</span><span class="o">;</span>
-  <span class="n">found</span> <span class="o">=</span> <span class="n">binary_search</span><span class="o">(</span><span class="n">myArray</span><span class="o">,</span> <span class="n">search_for</span><span class="o">);</span>
-  <span class="n">printLn</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">search_for</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; is in the list? : &quot;</span> <span class="o">+</span> <span class="n">toString</span><span class="o">(</span><span class="n">found</span><span class="o">));</span>
+  <span class="kd">var</span> <span class="n">found</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+  <span class="n">found</span> <span class="o">=</span> <span class="n">binary_search</span><span class="p">(</span><span class="n">myArray</span><span class="p">,</span> <span class="n">search_for</span><span class="p">);</span>
+  <span class="n">printLn</span><span class="p">(</span><span class="n">toString</span><span class="p">(</span><span class="n">search_for</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; is in the list? : &quot;</span> <span class="o">+</span> <span class="n">toString</span><span class="p">(</span><span class="n">found</span><span class="p">));</span>
 
 <span class="n">endfunction</span>
 
 
-<span class="n">function</span> <span class="nf">binary_search</span><span class="o">(</span><span class="n">an_array</span> <span class="o">:</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;,</span> <span class="n">search_for</span> <span class="o">:</span><span class="n">Int32</span><span class="o">)</span> <span class="o">:</span> <span class="n">Bool</span>
+<span class="n">function</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">an_array</span> <span class="p">:</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">Int32</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">search_for</span> <span class="p">:</span><span class="n">Int32</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span>
 
-    <span class="n">var</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="n">var</span> <span class="n">end</span> <span class="o">=</span> <span class="n">an_array</span><span class="o">.</span><span class="na">count</span><span class="o">();</span> 
-    <span class="n">var</span> <span class="n">found</span> <span class="o">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="kd">var</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="n">end</span> <span class="o">=</span> <span class="n">an_array</span><span class="p">.</span><span class="na">count</span><span class="p">();</span> 
+    <span class="kd">var</span> <span class="n">found</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
-    <span class="k">while</span><span class="o">(</span><span class="n">start</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="o">&amp;&amp;</span> <span class="n">found</span> <span class="o">==</span> <span class="kc">false</span><span class="o">)</span> 
+    <span class="k">while</span><span class="p">(</span><span class="n">start</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="o">&amp;&amp;</span> <span class="n">found</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> 
 
-        <span class="n">var</span> <span class="n">midpoint</span> <span class="o">=</span> <span class="o">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">end</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="kd">var</span> <span class="n">midpoint</span> <span class="o">=</span> <span class="p">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 
-        <span class="k">if</span> <span class="o">(</span><span class="n">search_for</span> <span class="o">==</span> <span class="n">an_array</span><span class="o">[</span><span class="n">midpoint</span><span class="o">])</span>
-            <span class="n">found</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">search_for</span> <span class="o">==</span> <span class="n">an_array</span><span class="o">[</span><span class="n">midpoint</span><span class="o">]</span><span class="p">)</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
-          <span class="n">elseif</span> <span class="o">(</span><span class="n">search_for</span> <span class="o">&lt;</span> <span class="n">an_array</span><span class="o">[</span><span class="n">midpoint</span><span class="o">])</span>
-            <span class="n">end</span> <span class="o">=</span> <span class="n">midpoint</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+          <span class="n">elseif</span> <span class="p">(</span><span class="n">search_for</span> <span class="o">&lt;</span> <span class="n">an_array</span><span class="o">[</span><span class="n">midpoint</span><span class="o">]</span><span class="p">)</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">midpoint</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
           <span class="k">else</span>
-            <span class="n">start</span> <span class="o">=</span> <span class="n">midpoint</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">midpoint</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 
         <span class="n">endif</span>
 
     <span class="n">endwhile</span>
 
-    <span class="k">return</span> <span class="n">found</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">found</span><span class="p">;</span>
 
 <span class="n">endfunction</span>
 </pre></div>
@@ -870,6 +882,7 @@
   <link rel="stylesheet" id="font-awesome-css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" type="text/css" media="all">
   <script src="../../../js/main.js"></script>
       <script src="../../../js/menu.js"></script>
+      <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
       <script src="../../../search/main.js"></script>
 </body>
 

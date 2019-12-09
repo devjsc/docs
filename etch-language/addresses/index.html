@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Everything you need to know about Fetch.ai.">
   <meta name="generator" content="mkdocs-1.0.4, mkdocs-">
-  <meta name="author" content="katharine.murphy@fetch.ai">
+  <meta name="author" content="developer@fetch.ai">
   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -235,8 +235,20 @@
 </li>
  
 <li>
+    <a href="../../aea/tac-skills/" id="aea-tac-skills-"
+        >TAC skills</a
+    >
+</li>
+ 
+<li>
     <a href="../../aea/tac/" id="aea-tac-"
         >TAC external app</a
+    >
+</li>
+ 
+<li>
+    <a href="../../aea/car-park/" id="aea-car-park-"
+        >Car park agent</a
     >
 </li>
 
@@ -757,9 +769,9 @@
 <p>The result is <code>Base58</code> encoded. </p>
 <p>You can generate test addresses with the  the <a href="https://github.com/fetchai/ledger-api-py" target=_blank><code>ledger-api-py</code>(Python SDK)</a>.</p>
 <h2 id="create-an-address">Create an <code>Address</code></h2>
-<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="o">()</span>
+<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">()</span>
 
-  <span class="n">var</span> <span class="n">account</span> <span class="o">=</span> <span class="n">Address</span><span class="o">(</span><span class="s">&quot;2ifr5dSFRAnXexBMC3HYEVp3JHSuz7KBPXWDRBV4xdFrqGy6R9&quot;</span><span class="o">);</span>
+  <span class="kd">var</span> <span class="n">account</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="s">&quot;2ifr5dSFRAnXexBMC3HYEVp3JHSuz7KBPXWDRBV4xdFrqGy6R9&quot;</span><span class="p">);</span>
 
 <span class="n">endfunction</span>
 </pre></div>
@@ -794,12 +806,12 @@
 <p><code>etch</code> currently supports the SHA256 encryption algorithm. Find out more <a href="../crypto" target=_blank>here</a>.</p>
 <h2 id="verification">Verification</h2>
 <p>The <code>Address</code> type has a function <code>signedTx()</code> which allows you to verify the signature. It returns a boolean. This is only valid in an <code>@action</code> function, else it will return false.</p>
-<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="o">()</span>
+<div class="highlight"><pre><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">()</span>
 
-  <span class="n">var</span> <span class="n">account</span> <span class="o">=</span> <span class="n">Address</span><span class="o">(</span><span class="s">&quot;2ifr5dSFRAnXexBMC3HYEVp3JHSuz7KBPXWDRBV4xdFrqGy6R9&quot;</span><span class="o">);</span>
-  <span class="n">var</span> <span class="n">verified</span> <span class="o">:</span> <span class="n">Bool</span><span class="o">;</span>
-  <span class="n">verified</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="na">signedTx</span><span class="o">();</span> 
-  <span class="n">printLn</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">verified</span><span class="o">));</span> 
+  <span class="kd">var</span> <span class="n">account</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="s">&quot;2ifr5dSFRAnXexBMC3HYEVp3JHSuz7KBPXWDRBV4xdFrqGy6R9&quot;</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="n">verified</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+  <span class="n">verified</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="na">signedTx</span><span class="p">();</span> 
+  <span class="n">printLn</span><span class="p">(</span><span class="n">toString</span><span class="p">(</span><span class="n">verified</span><span class="p">));</span> 
 
 <span class="n">endfunction</span>
 </pre></div>
@@ -858,6 +870,7 @@
   <link rel="stylesheet" id="font-awesome-css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" type="text/css" media="all">
   <script src="../../js/main.js"></script>
       <script src="../../js/menu.js"></script>
+      <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
       <script src="../../search/main.js"></script>
 </body>
 
